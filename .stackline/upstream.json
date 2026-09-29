@@ -1,0 +1,30 @@
+{
+  "upstream": "rehype-parse",
+  "fork": "@stackline/rehype-parse",
+  "repository": "alexandroit/stackline-rehype-parse",
+  "upstreamRepository": "rehypejs/rehype",
+  "upstreamVersion": "8.0.5",
+  "sourceCommit": "476d219cdd69f051bd5f64532e1cea237588c5f5",
+  "upstreamIntegrity": "sha512-Ds3RglaY/+clEX2U2mHflt7NlMA72KspZ0JLUJgBBLpRddBcEw3H8uYZQliQriku22NZpYMfjDdSgHcjxue24A==",
+  "head": "476d219cdd69f051bd5f64532e1cea237588c5f5",
+  "status": "source-ready",
+  "files": {
+    "lib/errors.js": "ec676244900d159688ae9b29d5ecc9bcc8fca758eba194d1278afce24f17d03b",
+    "index.js": "0c2edd7b321b422f04fbd4f5f8101b937f0fe88051434e69e7da30ef468e2030",
+    "lib/index.js": "f8db5d209f69b43bc8e229e5c45eaeb83a66b3e9f5e68b21f274b281427861cd",
+    "package.json": "e409b4c9fdfb9c78f39703f12a138010c8ee44ad949c89e9a5bae71e5ff89e68",
+    "readme.md": "c9571dce5fd176445f9cd138806250a4697f5b5629d34ba0f45b9e6c7a088e4e",
+    "lib/errors.d.ts": "c6bed72e6946614da36d7b7c34cdc687b4671577bc04f07712b3cafff4cf3390",
+    "index.d.ts": "2122a30a5b62d74161b6260f49ec37ef3462d383320ca7aff48bbd1d78274037",
+    "lib/index.d.ts": "7adef54c95d53524152224cb1badccce40c656f57b9d4de13ff5bf73656b5e85"
+  },
+  "allowedRuntimeChanges": [
+    "lib/index.js",
+    "lib/index.d.ts"
+  ],
+  "testCommand": "node --conditions development test/index.js",
+  "strategy": "Published upstream files, including generated declarations, are preserved and checked against SHA-256. Functional tests run against source and the extracted final package. Changes to published runtime files require an explicit reviewed allowlist.",
+  "typeFixes": [
+    "Declare the two public parser options directly with identical property types, avoiding incompatible parse5 v7 declaration references in hast-util-from-parse5 while preserving the required parse5 v6 runtime."
+  ]
+}

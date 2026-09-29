@@ -1,12 +1,5 @@
-coverage/
+
 node_modules/
-packages/rehype/*.d.ts
-packages/rehype-cli/*.d.ts
-packages/rehype-parse/lib/*.d.ts
-packages/rehype-stringify/lib/*.d.ts
-script/*.d.ts
-test/*.d.ts
-.DS_Store
-*.log
-tsconfig.tsbuildinfo
-yarn.lock
+artifact/
+.package-consumer/
+*.tgz

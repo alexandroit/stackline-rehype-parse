@@ -9,9 +9,9 @@ import {readSync} from 'to-vfile'
 import {removePosition} from 'unist-util-remove-position'
 import {assert} from 'hast-util-assert'
 import {unified} from 'unified'
-import rehypeParse from 'rehype-parse'
+import rehypeParse from '../index.js'
 import rehypeStringify from 'rehype-stringify'
-import {rehype} from 'rehype'
+import {rehype} from './processor.js'
 
 const fragment = {fragment: true}
 

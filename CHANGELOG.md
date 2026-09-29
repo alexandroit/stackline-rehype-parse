@@ -1,0 +1,9 @@
+# Changelog
+
+## 1.0.0
+
+- Start Stackline maintenance of the documented upstream API.
+- Preserve and verify published runtime files and TypeScript declarations.
+- Run upstream functional suites against both source and the final package.
+- Publish the reviewed CI artifact through GitHub Actions with provenance and immutable release evidence.
+- Preserve public option types without loading incompatible parse5 v7 declarations through a transitive helper; parser runtime remains on compatible parse5 v6.

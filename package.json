@@ -1,74 +1,100 @@
 {
-  "name": "rehype",
-  "private": true,
-  "license": "MIT",
-  "homepage": "https://github.com/rehypejs/rehype",
-  "repository": "rehypejs/rehype",
-  "bugs": "https://github.com/rehypejs/rehype/issues",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
+  "xo": false,
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-rehype-parse/issues"
   },
+  "main": "index.js",
+  "name": "@stackline/rehype-parse",
   "type": "module",
-  "workspaces": [
-    "packages/rehype-parse",
-    "packages/rehype-stringify",
-    "packages/rehype",
-    "packages/rehype-cli"
-  ],
-  "devDependencies": {
-    "@types/tape": "^4.0.0",
-    "bail": "^2.0.0",
-    "c8": "^7.0.0",
-    "hast-util-assert": "^3.0.0",
-    "mdast-zone": "^5.0.0",
-    "prettier": "^2.0.0",
-    "remark-cli": "^11.0.0",
-    "remark-preset-wooorm": "^9.0.0",
-    "tape": "^5.0.0",
-    "to-vfile": "^7.0.0",
-    "type-coverage": "^2.0.0",
-    "type-fest": "^3.0.0",
-    "typescript": "^5.0.0",
-    "unified": "^10.0.0",
-    "unist-builder": "^3.0.0",
-    "unist-util-remove-position": "^4.0.0",
-    "xo": "^0.54.0"
+  "types": "index.d.ts",
+  "author": {
+    "url": "https://wooorm.com",
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com"
   },
+  "funding": {
+    "url": "https://opencollective.com/unified",
+    "type": "opencollective"
+  },
+  "license": "MIT",
   "scripts": {
-    "build": "npm run build --workspaces && tsc --build --clean && tsc --build && type-coverage",
-    "format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
-    "test-api": "node --conditions development test/index.js",
-    "test-coverage": "c8 --check-coverage --100 --reporter lcov npm run test-api",
-    "test": "npm run build && npm run format && npm run test-coverage"
+    "test:upstream": "node --conditions development test/index.js",
+    "test": "npm run test:upstream",
+    "build": "node scripts/check-payload.mjs",
+    "test:package": "node scripts/test-package.mjs",
+    "test:types": "tsc --ignoreConfig --noEmit --module NodeNext --moduleResolution NodeNext --target ES2022 --strict test/stackline-types.mts"
   },
-  "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true,
-    "bracketSpacing": false,
-    "semi": false,
-    "trailingComma": "none"
+  "homepage": "https://github.com/alexandroit/stackline-rehype-parse#readme",
+  "keywords": [
+    "unified",
+    "rehype",
+    "rehype-plugin",
+    "plugin",
+    "html",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast",
+    "parse",
+    "stackline",
+    "maintenance-fork"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/stackline-rehype-parse.git"
   },
-  "xo": {
-    "prettier": true,
-    "ignores": [
-      "**/*.ts"
-    ],
-    "rules": {
-      "unicorn/prefer-code-point": "off"
+  "description": "rehype plugin to parse HTML",
+  "directories": {},
+  "sideEffects": false,
+  "contributors": [
+    {
+      "url": "https://wooorm.com",
+      "name": "Titus Wormer",
+      "email": "tituswormer@gmail.com"
     }
-  },
-  "remarkConfig": {
-    "plugins": [
-      "preset-wooorm",
-      "./script/parse-error.js"
-    ]
+  ],
+  "dependencies": {
+    "parse5": "^6.0.0",
+    "unified": "^10.0.0",
+    "@types/hast": "^2.0.0",
+    "hast-util-from-parse5": "^7.0.0"
   },
   "typeCoverage": {
-    "atLeast": 100,
     "detail": true,
     "strict": true,
+    "atLeast": 100,
     "ignoreCatch": true
+  },
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "hast-util-assert": "^3.0.0",
+    "tape": "5.10.2",
+    "to-vfile": "^7.0.0",
+    "unified": "^10.0.0",
+    "unist-util-remove-position": "^4.0.0",
+    "rehype-stringify": "^9.0.0",
+    "parse5": "^6.0.0",
+    "typescript": "7.0.2",
+    "@types/node": "24.12.2"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "lib/errors.d.ts",
+    "lib/errors.js",
+    "lib/index.d.ts",
+    "lib/index.js",
+    "readme.md",
+    "UPSTREAM.md",
+    "NOTICE",
+    "CHANGELOG.md"
+  ],
+  "overrides": {
+    "tape": {
+      "glob": "^13.0.6"
+    }
   }
 }
