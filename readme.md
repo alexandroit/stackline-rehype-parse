@@ -1,28 +1,52 @@
 # @stackline/rehype-parse
 
-Independent maintenance fork of `rehype-parse@8.0.5`, preserving its API and published type declarations.
+> rehype plugin to parse HTML.
 
-```sh
+[![npm version](https://img.shields.io/npm/v/@stackline/rehype-parse.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/rehype-parse)
+[![license](https://img.shields.io/npm/l/@stackline/rehype-parse.svg?style=flat-square)](https://github.com/alexandroit/stackline-rehype-parse)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-rehype-parse-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-rehype-parse)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/rehype-parse/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
+
+**[Documentation](https://alexandro.net/docs/vanilla/rehype-parse/)** | **[npm](https://www.npmjs.com/package/@stackline/rehype-parse)** | **[Issues](https://github.com/alexandroit/stackline-rehype-parse/issues)** | **[Repository](https://github.com/alexandroit/stackline-rehype-parse)**
+
+**Current package version:** `1.0.1`
+
+---
+
+## Why this package?
+
+`@stackline/rehype-parse` is the Stackline-maintained distribution of `rehype-parse@8.0.5`. It is an independent continuation of [rehype-parse](https://github.com/rehypejs/rehype); original authors and licenses remain credited below.
+
+## Compatibility
+
+| Item | Value |
+| :--- | :--- |
+| Package | `@stackline/rehype-parse@1.0.1` |
+| API target | `rehype-parse@8.0.5` |
+| Supported Node.js | `See supported framework requirements` |
+| License | `MIT` |
+| Module type | `module` |
+| Main entry | `index.js` |
+| Types | `index.d.ts` |
+| Runtime dependencies | `parse5, unified, @types/hast, hast-util-from-parse5` |
+
+## Installation
+
+```bash
 npm install @stackline/rehype-parse
-# Keep existing imports:
-npm install rehype-parse@npm:@stackline/rehype-parse@1.0.0
 ```
 
-[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-rehype-parse/issues) · [Community](https://www.reddit.com/r/Stackline/)
+Preserve existing imports and plugin resolution with an npm alias:
 
-See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+```bash
+npm install rehype-parse@npm:@stackline/rehype-parse
+```
 
-## Upstream documentation
+## Usage and API reference
 
-# rehype-parse
+### rehype-parse
 
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
-[![Sponsors][sponsors-badge]][collective]
-[![Backers][backers-badge]][collective]
-[![Chat][chat-badge]][chat]
 
 **[rehype][]** plugin to add support for parsing HTML input.
 
@@ -78,7 +102,7 @@ This package is [ESM only][esm].
 In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
-npm install rehype-parse
+npm install @stackline/rehype-parse
 ```
 
 In Deno with [`esm.sh`][esmsh]:
@@ -101,7 +125,7 @@ Say we have the following module `example.js`:
 
 ```js
 import {unified} from 'unified'
-import rehypeParse from 'rehype-parse'
+import rehypeParse from '@stackline/rehype-parse'
 import rehypeRemark from 'rehype-remark'
 import remarkStringify from 'remark-stringify'
 
@@ -170,7 +194,7 @@ Rules can also be configured with `2`, to turn them into fatal errors.
 
 The list of parse errors:
 
-<!-- parse-error start -->
+
 
 *   `abandonedHeadElementChild` — unexpected metadata element after head ([example](https://github.com/rehypejs/rehype/blob/main/test/parse-error/abandoned-head-element-child/index.html))
 *   [`abruptClosingOfEmptyComment`](https://html.spec.whatwg.org/multipage/parsing.html#parse-error-abrupt-closing-of-empty-comment) — unexpected abruptly closed empty comment ([example](https://github.com/rehypejs/rehype/blob/main/test/parse-error/abrupt-closing-of-empty-comment/index.html))
@@ -233,7 +257,7 @@ The list of parse errors:
 *   [`unexpectedSolidusInTag`](https://html.spec.whatwg.org/multipage/parsing.html#parse-error-unexpected-solidus-in-tag) — unexpected slash in tag ([example](https://github.com/rehypejs/rehype/blob/main/test/parse-error/unexpected-solidus-in-tag/index.html))
 *   [`unknownNamedCharacterReference`](https://html.spec.whatwg.org/multipage/parsing.html#parse-error-unknown-named-character-reference) — unexpected unknown named character reference ([example](https://github.com/rehypejs/rehype/blob/main/test/parse-error/unknown-named-character-reference/index.html))
 
-<!-- parse-error end -->
+
 
 ###### `options.verbose`
 
@@ -248,7 +272,7 @@ parsing as a fragment:
 
 ```js
 import {unified} from 'unified'
-import rehypeParse from 'rehype-parse'
+import rehypeParse from '@stackline/rehype-parse'
 import rehypeStringify from 'rehype-stringify'
 
 main()
@@ -296,7 +320,7 @@ inside the `<html>` element:
 
 ```js
 import {unified} from 'unified'
-import rehypeParse from 'rehype-parse'
+import rehypeParse from '@stackline/rehype-parse'
 import rehypeStringify from 'rehype-stringify'
 
 main(`<!doctype html>
@@ -346,7 +370,7 @@ The following example shows how HTML parse errors can be enabled and configured:
 ```js
 import {reporter} from 'vfile-reporter'
 import {unified} from 'unified'
-import rehypeParse from 'rehype-parse'
+import rehypeParse from '@stackline/rehype-parse'
 import rehypeStringify from 'rehype-stringify'
 
 main()
@@ -433,7 +457,7 @@ abide by its terms.
 
 Support this effort and give back by sponsoring on [OpenCollective][collective]!
 
-<!--lint ignore no-html-->
+
 
 <table>
 <tr valign="middle">
@@ -463,7 +487,7 @@ Support this effort and give back by sponsoring on [OpenCollective][collective]!
 <tr valign="middle">
 <td width="20%" align="center" rowspan="2" colspan="2">
   <a href="https://www.netlify.com">Netlify</a><br><br>
-  <!--OC has a sharper image-->
+  
   <a href="https://www.netlify.com"><img src="https://images.opencollective.com/netlify/4087de2/logo/256.png" width="128"></a>
 </td>
 <td width="10%" align="center">
@@ -506,7 +530,7 @@ Support this effort and give back by sponsoring on [OpenCollective][collective]!
 
 [MIT][license] © [Titus Wormer][author]
 
-<!-- Definitions -->
+
 
 [build-badge]: https://github.com/rehypejs/rehype/workflows/main/badge.svg
 
@@ -579,3 +603,22 @@ Support this effort and give back by sponsoring on [OpenCollective][collective]!
 [rehype-format]: https://github.com/rehypejs/rehype-format
 
 [parse5]: https://github.com/inikulin/parse5
+
+## Credits and original authors
+
+- Original project: [rehype-parse](https://github.com/rehypejs/rehype).
+- Titus Wormer.
+- Copyright (c) 2016 Titus Wormer.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
