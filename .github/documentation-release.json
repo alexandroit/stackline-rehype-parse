@@ -4,7 +4,7 @@
     {
       "name": "@stackline/rehype-parse",
       "path": "readme.md",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "baselineVersion": "1.0.0",
       "keywords": [
         "stackline",
@@ -26,8 +26,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/rehype-parse/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/rehype-parse/-/rehype-parse-1.0.0.tgz",
       "baselineIntegrity": "sha512-Lm98LkoLod92ahTREb2yFlyccjufev2CSBMJwz7T68TqcUjgqZh5mGfGrDgbnve3/5rFMnr5OFO4S8d5AWuBqg==",
-      "expectedSha512": "7b3308cba1c7c62e00268a3fa519ad7173177e6deee8f9eb05759685dcc5407921ae750d5afb7f4ed16610188fb14284f8332e797b862fbe834c513f63c48065",
-      "tag": "docs-stackline-rehype-parse-v1.0.1"
+      "expectedSha512": "d27e0993df832a7d4c0b9c1542d74ce822a48d65d70f8d7d1c8cee4beb8bd9494edc8a27fb1331a4cbff4eb01214d714b12c92f932c17a9f630e8f3450fb8c58",
+      "tag": "docs-stackline-rehype-parse-v1.0.2"
     }
   ]
 }
