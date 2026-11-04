@@ -10,7 +10,7 @@
 
 **[Documentation](https://alexandro.net/docs/vanilla/rehype-parse/)** | **[npm](https://www.npmjs.com/package/@stackline/rehype-parse)** | **[Issues](https://github.com/alexandroit/stackline-rehype-parse/issues)** | **[Repository](https://github.com/alexandroit/stackline-rehype-parse)**
 
-**Current package version:** `1.0.2`
+**Current package version:** `1.0.3`
 
 ---
 
@@ -22,7 +22,7 @@
 
 | Item | Value |
 | :--- | :--- |
-| Package | `@stackline/rehype-parse@1.0.2` |
+| Package | `@stackline/rehype-parse@1.0.3` |
 | API target | `rehype-parse@8.0.5` |
 | Supported Node.js | `See supported framework requirements` |
 | License | `MIT` |
